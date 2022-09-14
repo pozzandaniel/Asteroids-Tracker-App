@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DateDashboardComponent } from './date-dashboard.component';
+import { AsteroidsTabComponent } from './asteroids-tab.component';
 
-describe('DateDashboardComponent', () => {
-  let component: DateDashboardComponent;
-  let fixture: ComponentFixture<DateDashboardComponent>;
+describe('AsteroidsTabComponent', () => {
+  let component: AsteroidsTabComponent;
+  let fixture: ComponentFixture<AsteroidsTabComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DateDashboardComponent ]
+      declarations: [ AsteroidsTabComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DateDashboardComponent);
+    fixture = TestBed.createComponent(AsteroidsTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

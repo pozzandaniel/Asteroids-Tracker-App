@@ -7,19 +7,23 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
 import { DatePipe } from '@angular/common';
-import { DateDashboardComponent } from './date-dashboard/date-dashboard.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { AsteroidsTabComponent } from './asteroids-tab/asteroids-tab.component';
+import { MatTableModule } from '@angular/material/table';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    DateDashboardComponent
+    AsteroidsTabComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    MatButtonModule 
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule 
 
     
   ],
