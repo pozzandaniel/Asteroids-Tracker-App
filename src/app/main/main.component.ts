@@ -48,6 +48,7 @@ export class MainComponent implements OnInit {
     for(let i = 0; i < this.asteroids.length; i++) {
       this.getAPIAsteroid(i);
     }
+    console.log("from service. ",this.db.asteroids);
   }
 
   getAPIAsteroid(i){
@@ -60,7 +61,6 @@ export class MainComponent implements OnInit {
     let nameAsteroid = this.asteroids[i].name;
 
     this.db.updateAsteroidInfos(approchDate, missDistance, diameterMin, diameterMax, potentiallyHazard, orbitBody, nameAsteroid);
-    console.log("from service. ",this.db.asteroids);
 
 
 

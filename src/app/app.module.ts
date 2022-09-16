@@ -42,7 +42,8 @@ import { MatTableModule } from '@angular/material/table';
   ],
   providers: [
     DatePipe, 
-    MatDatepickerModule
+    MatDatepickerModule,
+    
   ],
   bootstrap: [AppComponent]
 })

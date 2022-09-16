@@ -3,7 +3,7 @@
     <div class="image-container">
         <img src="./assets/img/header.jpg">
     </div>
-    <h2 class="main-title">Today the {{ todayEU }} are {{ asteroids.length }} asteroids near the Earth</h2>
+    <h2 class="main-title">Today the {{ todayEU }} are {{ asteroids? asteroids.length : 0 }} asteroids near the Earth</h2>
 
     <mat-form-field class="powderblue" appearance="fill">
         <mat-label>Choose a date</mat-label>
