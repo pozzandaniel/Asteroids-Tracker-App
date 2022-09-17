@@ -38,7 +38,7 @@ export class MainComponent implements OnInit {
     let response = await fetch(url);
     this.dataFromUrl = await response.json();
     this.asteroids = this.dataFromUrl.near_earth_objects[this.today];
-    console.log(this.asteroids[0]);
+    console.log('asteroids from fetch',this.asteroids);
     this.getAPIASteroids();
     
  
@@ -48,7 +48,6 @@ export class MainComponent implements OnInit {
     for(let i = 0; i < this.asteroids.length; i++) {
       this.getAPIAsteroid(i);
     }
-    console.log("from service. ",this.db.asteroids);
   }
 
   getAPIAsteroid(i){
