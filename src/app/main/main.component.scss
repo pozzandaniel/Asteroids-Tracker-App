@@ -22,15 +22,22 @@
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    position: relative;
     height: 95vh;
+    position: relative;
     
-    .mat-icon {
-        color: #3F51B5;    
+    a {
         position: absolute;
-        cursor: pointer;
-        height: 80px;
-        width: 80px;
+        bottom: 0;
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+        .mat-icon {
+            color: #3F51B5;    
+            position: absolute;
+            cursor: pointer;
+            height: 80px;
+            width: 80px;
+        }
     }
     .btn-search {
         margin-top: 20px;

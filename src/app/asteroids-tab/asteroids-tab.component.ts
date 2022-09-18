@@ -11,7 +11,6 @@ import { AsteroidsPatternService } from '../asteroids-pattern.service';
   styleUrls: ['./asteroids-tab.component.scss']
 })
 export class AsteroidsTabComponent implements OnInit {
-  displayedColumns: any[];
   asteroids: any[];
   constructor(public db: AsteroidsPatternService ) { 
     

@@ -14,7 +14,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { AsteroidsTabComponent } from './asteroids-tab/asteroids-tab.component';
-import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatBadgeModule } from '@angular/material/badge';
+
+
 
 
 
@@ -36,8 +39,8 @@ import { MatTableModule } from '@angular/material/table';
     MatNativeDateModule,
     MatButtonModule,
     MatIconModule,
-    MatTableModule 
-
+    MatTooltipModule,
+    MatBadgeModule
     
   ],
   providers: [

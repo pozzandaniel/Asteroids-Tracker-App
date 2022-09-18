@@ -1,12 +1,22 @@
-<table>
+<table id="asteroidTable">
   <tr>
     <th>Name</th>
     <th>Close approach date</th>
-    <th>Miss distance (Lunar)</th>
-    <th>Max estimated diameter</th>
-    <th>Min estimated diameter</th>
+    <th matBadge="Info" mat-raised-button 
+      matTooltip="A lunar distance, 384,399 km, is the Moon's average distance to Earth." 
+      matTooltipPosition="above">Miss distance (Lunar)</th>
+    <th>Max estimated diameter (Km)</th>
+    <th>Min estimated diameter (Km)</th>
     <th>Orbiting body</th>
-    <th>Potentially hazardous</th>
+    <th matBadge="Info" mat-raised-button 
+    matTooltip="A potentially hazardous object is a near-Earth object, 
+    with an orbit that can make close approaches to the Earth and is large enough to cause significant regional damage 
+    in the event of impact." 
+    matTooltipPosition="above">Potentially hazardous</th>
+    <th matBadge="Info" mat-raised-button 
+    matTooltip="Potentially hazardous asteroids with some threat of impacting 
+    Earth in the next 100 years are listed on the Sentry Risk Table." 
+    matTooltipPosition="above">Sentry Object</th>
   </tr>
   <tr *ngFor="let asteroid of asteroids">
     <td>{{ asteroid.nameAsteroid }}</td>
@@ -16,5 +26,6 @@
     <td>{{ asteroid.estimatedDiameterMin }}</td>
     <td>{{ asteroid.orbitingBody }}</td>
     <td>{{ asteroid.potentiallyHazardousAst }}</td>
+    <td>{{ asteroid.sentryObject }}</td>
   </tr>
 </table>

@@ -8,6 +8,7 @@ export class Asteroid {
   potentiallyHazardousAst:boolean
   orbitingBody:string
   nameAsteroid: string
+  sentryObject: boolean
 }
 
 @Injectable({
@@ -25,7 +26,7 @@ export class AsteroidsPatternService {
       
   }
 
-  updateAsteroidInfos(date:string, dist:string, minD:number, maxD:number, hazard:boolean, orbitB:string, name:string) {
+  updateAsteroidInfos(date:string, dist:string, minD:number, maxD:number, hazard:boolean, orbitB:string, name:string, sentryObj:boolean) {
     this.asteroid = new Asteroid()
     this.asteroid.closeApproachDate = date;
     this.asteroid.missDistance = dist;
@@ -34,6 +35,7 @@ export class AsteroidsPatternService {
     this.asteroid.potentiallyHazardousAst = hazard;
     this.asteroid.orbitingBody = orbitB;
     this.asteroid.nameAsteroid = name;
+    this.asteroid.sentryObject = sentryObj;
 
       console.log('asteroid service befor pushing', this.asteroid);
       console.log('asteroids array service befor pushing', this.asteroidservice);

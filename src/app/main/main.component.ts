@@ -58,8 +58,11 @@ export class MainComponent implements OnInit {
     let potentiallyHazard = this.asteroids[i].is_potentially_hazardous_asteroid;
     let orbitBody = this.asteroids[i].close_approach_data[0].orbiting_body;
     let nameAsteroid = this.asteroids[i].name;
+    let sentryObj = this.asteroids[i].is_sentry_object;
 
-    this.db.updateAsteroidInfos(approchDate, missDistance, diameterMin, diameterMax, potentiallyHazard, orbitBody, nameAsteroid);
+
+    this.db.updateAsteroidInfos(approchDate, missDistance, diameterMin, diameterMax, 
+      potentiallyHazard, orbitBody, nameAsteroid, sentryObj);
 
 
 
