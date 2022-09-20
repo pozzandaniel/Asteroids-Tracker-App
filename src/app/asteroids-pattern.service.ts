@@ -36,16 +36,14 @@ export class AsteroidsPatternService {
     this.asteroid.orbitingBody = orbitB;
     this.asteroid.nameAsteroid = name;
     this.asteroid.sentryObject = sentryObj;
-
-      console.log('asteroid service befor pushing', this.asteroid);
-      console.log('asteroids array service befor pushing', this.asteroidservice);
-      
     this.asteroidservice.push(this.asteroid);
-
-    console.log('asteroid service after pushing', this.asteroid);
-    console.log('asteroids array service after pushing', this.asteroidservice);
-
     
+
+  }
+
+  removeElements(){
+    this.asteroidservice = [];
+
   }
 
   

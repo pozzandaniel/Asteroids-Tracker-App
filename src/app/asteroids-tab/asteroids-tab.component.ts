@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {  Component, OnInit } from '@angular/core';
 import { AsteroidsPatternService } from '../asteroids-pattern.service';
 
 
+export class Asteroid {
 
+}
 
 
 @Component({
@@ -10,15 +12,24 @@ import { AsteroidsPatternService } from '../asteroids-pattern.service';
   templateUrl: './asteroids-tab.component.html',
   styleUrls: ['./asteroids-tab.component.scss']
 })
-export class AsteroidsTabComponent implements OnInit {
-  asteroids: any[];
+export class AsteroidsTabComponent implements OnInit  {
+  
+  
+ 
+
   constructor(public db: AsteroidsPatternService ) { 
     
   }
   
-  ngOnInit(): void {
-    this.asteroids = this.db.asteroidservice;
+ 
+
+  ngOnInit() {
+    
   }
+
+
+  
+ 
   
 
 

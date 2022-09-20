@@ -1,5 +1,24 @@
+.container {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+
 table {
-  width: 100%;
+  width: 90%;
   color: wheat;
+  margin-top: 20px;
+  box-sizing: border-box;
+
+  
+
+  th, td {
+    text-align: start;
+  
+  }
+  
 }
 

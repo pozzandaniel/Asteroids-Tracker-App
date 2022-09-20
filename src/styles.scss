@@ -5,6 +5,8 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: rgba(0, 0, 0, 0.95); 
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .mat-form-field-appearance-fill.powderblue .mat-form-field-flex {

@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AsteroidsTabComponent } from './asteroids-tab/asteroids-tab.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatBadgeModule } from '@angular/material/badge';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -40,7 +41,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    MatBadgeModule
+    MatBadgeModule,
+    FormsModule
     
   ],
   providers: [

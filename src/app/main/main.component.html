@@ -3,20 +3,19 @@
     <div class="image-container">
         <img src="./assets/img/header.jpg">
     </div>
-    <h2 class="main-title">Today the {{ todayEU }} are {{ asteroids? asteroids.length : 0 }} asteroids near the Earth</h2>
+    <h2 class="main-title">On {{ dateEU }} are {{ asteroids? asteroids.length : 0 }} asteroids near the Earth</h2>
 
     <mat-form-field class="powderblue" appearance="fill">
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker">
+        <input [(ngModel)]="pickedDate" matInput [matDatepicker]="picker">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <button class="btn-search" mat-flat-button color="primary">Track Asteroids</button>
+    <button class="btn-search" mat-flat-button color="primary" (click)="returnAsteroids()">Track Asteroids</button>
     <a href="#asteroidTable">
-        <mat-icon class="arrow-1" aria-hidden="false" aria-label="Example home icon" fontIcon="expand_more" [ngStyle]="{'bottom': '20px'}"></mat-icon>
-        <mat-icon class="arrow-2" aria-hidden="false" aria-label="Example home icon" fontIcon="expand_more" [ngStyle]="{'bottom': '0px'}"></mat-icon>
-        <mat-icon class="arrow-3" aria-hidden="false" aria-label="Example home icon" fontIcon="expand_more" [ngStyle]="{'bottom': '-20px'}"></mat-icon>
+        <mat-icon class="arrow-1" aria-hidden="false" aria-label="Example home icon" fontIcon="expand_more" [ngStyle]="{'bottom': '30px'}"></mat-icon>
+        <mat-icon class="arrow-2" aria-hidden="false" aria-label="Example home icon" fontIcon="expand_more" [ngStyle]="{'bottom': '10px'}"></mat-icon>
     </a>
 
 </div>
