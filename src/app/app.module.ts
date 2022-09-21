@@ -17,10 +17,8 @@ import { AsteroidsTabComponent } from './asteroids-tab/asteroids-tab.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatBadgeModule } from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
-
-
-
-
+import { AsteroidScheduleComponent } from './asteroid-schedule/asteroid-schedule.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -28,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     MainComponent,
     AsteroidsTabComponent,
+    AsteroidScheduleComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +41,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatTooltipModule,
     MatBadgeModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
     
   ],
   providers: [

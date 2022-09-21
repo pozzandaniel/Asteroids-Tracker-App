@@ -1,12 +1,29 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { DatePipe } from '@angular/common'
 import { AsteroidsPatternService } from '../asteroids-pattern.service';
+import {
+  MAT_MOMENT_DATE_FORMATS,
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import 'moment/locale/fr';
+
 
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss'],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'fr-FR'},
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
+    },
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+  ]
 })
 export class MainComponent implements OnInit {
   // EXAMPLE OF REQUEST. https://api.nasa.gov/planetary/apod?api_key=9mhHsGTvRVzv3IPyTwOm47ZouJa9usvnNlkEaZn5.
@@ -23,7 +40,9 @@ export class MainComponent implements OnInit {
   
 
   constructor(public datepipe: DatePipe,
-    private db: AsteroidsPatternService) { }
+    private db: AsteroidsPatternService,
+    private _adapter: DateAdapter<any>,
+    @Inject(MAT_DATE_LOCALE) private _locale: string) { }
 
   ngOnInit(): void {
     this.date = new Date();
@@ -32,6 +51,7 @@ export class MainComponent implements OnInit {
     this.dateEU = this.datepipe.transform(this.latest_date, 'dd MMMM yyyy');
     this.after_3_days = this.datepipe.transform(this.date, 'yyyy-MM-dd');
     this.init(this.today);
+    this.getLocalFormat();
   }
   
   async init(date) {
@@ -75,8 +95,20 @@ export class MainComponent implements OnInit {
     this.init(date);
   }
 
-  
 
+  getLocalFormat() {
+    this._locale = 'fr';
+    this._adapter.setLocale(this._locale)
+    this.pickedDate = this.changeFormatDate();
+  }
+
+  changeFormatDate() {
+    if(this._locale === 'fr') {
+      return 'DD/MM/YYYY';
+    } else {
+      return 'MM/DD/YYYY'
+    }
+  }
   
 
 }

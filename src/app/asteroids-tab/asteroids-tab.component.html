@@ -21,7 +21,7 @@
       Earth in the next 100 years are listed on the Sentry Risk Table." 
       matTooltipPosition="above">Sentry Object</th>
     </tr>
-    <tr *ngFor="let asteroid of db.asteroidservice" >
+    <tr class="asteroidRow" *ngFor="let asteroid of db.asteroidservice" (click)="showAsteroidDetails(asteroid)" >
       <td>{{ asteroid.nameAsteroid }}</td>
       <td>{{ asteroid.closeApproachDate }}</td>
       <td>{{ asteroid.missDistance }}</td>

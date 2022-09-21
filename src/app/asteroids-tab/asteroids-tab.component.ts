@@ -1,4 +1,6 @@
 import {  Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AsteroidScheduleComponent } from '../asteroid-schedule/asteroid-schedule.component';
 import { AsteroidsPatternService } from '../asteroids-pattern.service';
 
 
@@ -17,7 +19,8 @@ export class AsteroidsTabComponent implements OnInit  {
   
  
 
-  constructor(public db: AsteroidsPatternService ) { 
+  constructor(public db: AsteroidsPatternService,
+    public dialog: MatDialog ) { 
     
   }
   
@@ -30,7 +33,10 @@ export class AsteroidsTabComponent implements OnInit  {
 
   
  
-  
+  showAsteroidDetails(asteroid){
+    let dialog = this.dialog.open(AsteroidScheduleComponent);
+    dialog.componentInstance.asteroid = asteroid;
+  }
 
 
 }
