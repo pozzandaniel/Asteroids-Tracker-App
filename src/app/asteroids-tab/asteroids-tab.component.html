@@ -28,8 +28,8 @@
       <td>{{ asteroid.estimatedDiameterMax }}</td>
       <td>{{ asteroid.estimatedDiameterMin }}</td>
       <td>{{ asteroid.orbitingBody }}</td>
-      <td>{{ asteroid.potentiallyHazardousAst }}</td>
-      <td>{{ asteroid.sentryObject }}</td>
+      <td [ngClass]="{'red': asteroid.potentiallyHazardousAst === true}">{{ asteroid.potentiallyHazardousAst }}</td>
+      <td [ngClass]="{'red': asteroid.sentryObject === true}">{{ asteroid.sentryObject }}</td>
     </tr>
   </table>
 </div>

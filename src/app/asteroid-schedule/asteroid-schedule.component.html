@@ -1,5 +1,13 @@
 <div class="asteroid-box">
     <h1>Name of the Asteroid: {{ asteroid.nameAsteroid }}</h1>
     <h2>Average estimated dimension: {{ averageDiameter }} Km</h2>
-    <img src="assets/img/{{ selectImg() }}" alt="">
+    <div class="damage-box">
+        <div class="leftcase">
+            <h3>Dimension like a: {{ comparison }}</h3>
+            <h3>Estimated damage: {{ damage }}</h3>
+            <h3>Miss distance: {{ missDistance }} times the distance between earth and moon</h3>
+            <h3>Closest approach date: {{ approachDate }}</h3>
+        </div>
+        <img src="assets/img/{{ selectImg() }}" alt="">
+    </div>
 </div>
